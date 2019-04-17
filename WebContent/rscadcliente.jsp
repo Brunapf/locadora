@@ -1,14 +1,15 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 <%@page import="javax.swing.JOptionPane"%>
-<%@page import="br.com.locadora.*" errorPage="erro.jsp"%>
-<jsp:useBean id="Cliente" class="br.com.locadora.Cliente">
-<jsp:useBean id="Fachada" class="br.com.locadora.Fachada">
+<%@page import="br.com.locadora.domain.*" errorPage="erro.jsp"%>
+<jsp:useBean id="Cliente" class="br.com.locadora.domain.Cliente"/>
+<jsp:useBean id="fachada" class="br.com.locadora.domain.Fachada"/>
 
 <%
     String rg = "", Nome = "", endereco = "", bairro = "", cidade = "", estado = "", telefone = "",email="",sexo="", msg = "";
-	Date dtNascimento= null;	
+	Date dtNascimento = null;
 	
-	rg = request.getParametfaer("rg");
+	rg = request.getParameter("rg");
     Nome = request.getParameter("nome");
     endereco = request.getParameter("endereco");
     bairro = request.getParameter("bairro");
@@ -16,9 +17,10 @@
     estado = request.getParameter("estado");
     telefone = request.getParameter("telefone");
     email = request.getParameter("email");
-    dtNascimento = request.getParameter("dtNascimento").toString();
+    SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+	dtNascimento = formato.parse(request.getParameter("dtNascimento"));
     sexo= request.getParameter("sexo");
-     
+    
     Cliente.setRg(rg);
     Cliente.setNome(Nome);
     Cliente.setEndereco(endereco);
@@ -30,7 +32,7 @@
 	Cliente.setDtNascimento(dtNascimento);
 	Cliente.setSexo(sexo);
     
-    if (Fachada.setCliente('I', Cliente)) {
+    if (fachada.setCliente('I', Cliente)) {
         msg = "Cadastrado efetuado com Exito";
     } else {
         msg = "O cadastro não pode ser realizado";

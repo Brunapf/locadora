@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <link rel="stylesheet" href="css/estilo.css" type="text/css" />
-        <title>Cadastro de Cliente</title>
+        <title>Cadastro de Filmes</title>
     </head>
     <body id="container">
 
@@ -24,61 +24,38 @@
                     <div id="img"></div>
 
                     <div id="form">
-                        <form action="rscadcliente.jsp" method="post" name="frmCadastro" target="_self" id="frmCadastro">
+                        <form action="rscadfilme.jsp" method="post" name="frmCadastro" target="_self" id="frmCadastro">
                             <div align="center">
-                                <h1>Formulário de Cadastro de Cliente</h1>
+                                <h1>Cadastro de Filmes</h1>
 
                                 <table width="80%"  border="0">
                                     <tr>
-                                        <td width="12%"><span class="style1"><strong>Nome:</strong></span></td>
+                                        <td width="12%"><span class="style1"><strong>Titulo do Filme:</strong></span></td>
                                         <td width="88%"><span class="style1">
-                                                <input name="nome" type="text" id="nome" size="40">
+                                                <input name="titulo" type="text" id="titulo" size="40">
                                             </span></td>
                                     </tr>
                                     
                                     <tr>
-                                        <td><strong>RG:</strong></td>
+                                        <td><strong>Categoria:</strong></td>
                                         <td><span class="style1">
-                                                <input name="rg" type="text" id="rg" size="20" />
+                                                <input name="categoria" type="text" id="categoria" size="20" />
                                             </span></td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Endereco:</strong></td>
+                                        <td><strong>diretor:</strong></td>
                                         <td><span class="style1">
-                                                <input name="endereco" type="text" id="endereco" size="20" />
+                                                <input name="diretor" type="text" id="diretor" size="20" />
                                             </span></tr>
 
                                     <tr>
-                                        <td><strong>Bairro:</strong></td>
+                                        <td><strong>Valor da Locacão:</strong></td>
                                         <td><strong>
-                                                <input name="bairro" type="text" id="bairro" size="40" />
+                                                <input name="vlocacao" type="text" id="vlocacao" size="40" />
                                             </strong></tr>
                                     <tr>
-                                        <td><strong>Cidade:</strong></td>
-                                        <td><input name="cidade" type="text" id="cidade" size="20" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Estado:</strong></td>
-                                        <td><input name="estado" type="text" id="estado" size="20" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Telefone:</strong></td>
-                                        <td><input name="telefone" type="text" id="telefone" size="20" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>E-mail:</strong></td>
-                                        <td><input name="email" type="text" id="email" size="20" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>data Nascimento:</strong></td>
-                                        <td><input name="dtNascimento" type="text" id="dtNascimento" size="20" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Sexo:</strong></td>
-                                        <td><select name="sexo" size="1" id="sexo">
-                                                <option value="1">M</option>
-                                                <option value="2">F</option>
-                                            </select></td>
+                                        <td><strong>Reservada:</strong></td>
+                                        <td><input name="reservada" type="text" id="reservada" size="20" /></td>
                                     </tr>
                                     <tr>
                                         <td>&nbsp;</td>
